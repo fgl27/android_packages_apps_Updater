@@ -151,19 +151,17 @@ public class Utils {
     }
 
     public static String getServerURL(Context context) {
-        String incrementalVersion = SystemProperties.get(Constants.PROP_BUILD_VERSION_INCREMENTAL);
-        String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
-                SystemProperties.get(Constants.PROP_DEVICE));
-        String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
+        //String incrementalVersion = SystemProperties.get(Constants.PROP_BUILD_VERSION_INCREMENTAL);
+        //String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
+        //        SystemProperties.get(Constants.PROP_DEVICE));
+        //String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
 
-        String serverUrl = SystemProperties.get(Constants.PROP_UPDATER_URI);
-        if (serverUrl.trim().isEmpty()) {
-            serverUrl = context.getString(R.string.updater_server_url);
-        }
+        //String serverUrl = SystemProperties.get(Constants.PROP_UPDATER_URI);
+        //if (serverUrl.trim().isEmpty()) {
+        //    serverUrl = context.getString(R.string.updater_server_url);
+        //}
 
-        return serverUrl.replace("{device}", device)
-                .replace("{type}", type)
-                .replace("{incr}", incrementalVersion);
+        return "https://raw.githubusercontent.com/fgl27/scripts/master/etc/quark_lineage_q.json";
     }
 
     public static String getUpgradeBlockedURL(Context context) {
@@ -173,9 +171,9 @@ public class Utils {
     }
 
     public static String getChangelogURL(Context context) {
-        String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
-                SystemProperties.get(Constants.PROP_DEVICE));
-        return context.getString(R.string.menu_changelog_url, device);
+        //String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
+        //        SystemProperties.get(Constants.PROP_DEVICE));
+        return "https://github.com/fgl27/scripts/blob/master/etc/changelogs/Changelog_L_Q.md";
     }
 
     public static void triggerUpdate(Context context, String downloadId) {
