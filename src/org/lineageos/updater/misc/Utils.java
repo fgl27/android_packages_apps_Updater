@@ -161,7 +161,7 @@ public class Utils {
         //    serverUrl = context.getString(R.string.updater_server_url);
         //}
 
-        return "https://raw.githubusercontent.com/fgl27/scripts/master/etc/quark_lineage_q.json";
+        return "https://raw.githubusercontent.com/fgl27/scripts/master/etc/quark_lineage_r.json";
     }
 
     public static String getUpgradeBlockedURL(Context context) {
@@ -173,7 +173,7 @@ public class Utils {
     public static String getChangelogURL(Context context) {
         //String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
         //        SystemProperties.get(Constants.PROP_DEVICE));
-        return "https://github.com/fgl27/scripts/blob/master/etc/changelogs/Changelog_L_Q.md";
+        return "https://github.com/fgl27/scripts/blob/master/etc/changelogs/Changelog_L_R.md";
     }
 
     public static void triggerUpdate(Context context, String downloadId) {
